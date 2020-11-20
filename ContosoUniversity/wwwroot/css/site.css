@@ -1,6 +1,25 @@
 ﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */
 
+*, body {
+    font-family: 'Work Sans', sans-serif;
+}
+
+header {
+    background-color: #056cb6;
+    font-weight: bold;
+}
+
+header a {
+    color: #efefef;
+}
+
+main.pb-3 > h2, main.pb-3 > h1 {
+    background-color: #e9ecef;
+    padding: 10px;
+    /*margin-left: 100px;*/
+}
+
 a.navbar-brand {
   white-space: normal;
   text-align: center;
@@ -9,7 +28,7 @@ a.navbar-brand {
 
 /* Provide sufficient contrast against white background */
 a {
-  color: #0366d6;
+    color: darkblue;
 }
 
 .btn-primary {
@@ -63,13 +82,66 @@ body {
   margin-bottom: 60px;
 }
 .footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  white-space: nowrap;
-  line-height: 60px; /* Vertically center the text there */
+    background-color: #056cb6;
+    color: #efefef;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    white-space: nowrap;
+    line-height: 60px; /* Vertically center the text there */
 }
 
 .success {
     background-color: rgba(0, 150, 0,.35);
+}
+
+.site-brand {
+    background-color: black;
+    color: #efefef;
+    padding: 20px;
+    margin-bottom: -15px;
+    margin-top: -15px;
+}
+
+.site-btn {
+    margin: 5px;
+    margin-left: 12px;
+}
+
+.site-color {
+    color: #efefef;
+}
+
+.site-home-banner {
+    background-color: #e9ecef;
+    padding: 20px;
+    text-align: center;
+}
+
+.site-img-max {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.site-img-thumbnail {
+    height: 250px;
+    width: 100%;
+    margin: 10px auto;
+}
+
+.site-left {
+    float: left;
+}
+
+.site-right {
+    float: right;
+}
+
+.site-search {
+    vertical-align: middle;
+    padding-top: 2px;
+}
+
+.site-txt-right {
+    text-align: right;
 }

@@ -7,7 +7,7 @@
 <h2>Instructors</h2>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a class="btn btn-sm btn-success site-btn" asp-action="Create">Create New</a>
 </p>
 <table class="table">
     <thead>
@@ -48,11 +48,11 @@
                         }
                     }
                 </td>
-                <td>
-                    <a asp-action="Index" asp-route-id="@item.InstructorID">Select</a> |
-                    <a asp-action="Edit" asp-route-id="@item.InstructorID">Edit</a> |
-                    <a asp-action="Details" asp-route-id="@item.InstructorID">Details</a> |
-                    <a asp-action="Delete" asp-route-id="@item.InstructorID">Delete</a>
+                <td class="site-right">
+                    <a class="btn btn-sm btn-outline-primary" asp-action="Index" asp-route-id="@item.InstructorID">Select</a> |
+                    <a class="btn btn-sm btn-warning" asp-action="Edit" asp-route-id="@item.InstructorID">Edit</a> |
+                    <a class="btn btn-sm btn-info" asp-action="Details" asp-route-id="@item.InstructorID">Details</a> |
+                    <a class="btn btn-sm btn-danger" asp-action="Delete" asp-route-id="@item.InstructorID">Delete</a>
                 </td>
             </tr>
         }
@@ -75,7 +75,7 @@
             }
             <tr class="@selectedRow">
                 <td>
-                    @Html.ActionLink("Select", "Index", new { courseID = item.CourseID })
+                    @Html.ActionLink("Select", "Index", new { courseID = item.CourseID }, new { @class= "btn btn-sm btn-outline-primary" })
                 </td>
                 <td>
                     @item.CourseID
