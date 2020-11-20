@@ -29,18 +29,18 @@ namespace ContosoUniversity.Controllers
         // GET: Departments/Details/5
         public async Task<IActionResult> Details(int? id)
         {
-            if (id == null)
-            {
+            if (id == null) {
                 return NotFound();
             }
 
+            string query = "SELECT * FROM Department WHERE DepartmentID = {0}";
             var department = await _context.Departments
-                .Include(i => i.Administrator)
+                .FromSqlRaw(query, id)
+                .Include(d => d.Administrator)
                 .AsNoTracking()
-                .FirstOrDefaultAsync(m => m.DepartmentID == id);
+                .FirstOrDefaultAsync();
 
-            if (department == null)
-            {
+            if (department == null) {
                 return NotFound();
             }
 
